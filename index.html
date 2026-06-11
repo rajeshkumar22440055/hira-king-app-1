@@ -70,12 +70,15 @@
        <img src="https://i.ibb.co/v4bXw6W/gold-pot-coins.png" alt="HK Gold Pot" class="pot-visual">
 
         /* The 100% Same Pot Visual */
-        .pot-visual {
-            width: 220px;
-            height: auto;
-            object-fit: contain;
-            z-index: 3;
-        }
+       .pot-visual {
+    width: 160px; /* Pot ka size control karne ke liye */
+    height: 130px; /* Height fix karne se image visible ho jayegi */
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.5));
+}
 
         /* Dynamic Coin Particle System Over Pot */
         .live-coin {
