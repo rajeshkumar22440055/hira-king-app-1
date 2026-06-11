@@ -3,45 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hira King - Social Casino</title>
+    <title>Hira King</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
         body { 
-            background: url('https://i.imgur.com/kP8yZzL.jpg') no-repeat center center fixed; 
-            background-size: cover; 
-            height: 100vh; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
+            /* Casino Background */
+            background: #0a0a0a; 
+            min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 10px;
         }
-        .container { 
-            background: rgba(10, 5, 25, 0.85); 
-            border: 3px solid #FFD700; 
-            padding: 25px; 
-            border-radius: 25px; 
-            text-align: center; 
-            width: 90%; 
+        .main-panel {
+            background: rgba(10, 5, 20, 0.9);
+            border: 4px solid #FFD700;
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
             max-width: 400px;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            width: 100%;
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
         }
-        h1 { color: #FFD700; font-size: 2.5rem; text-transform: uppercase; text-shadow: 0 0 10px #000; }
-        .slots { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
-        .slot { background: #1a0033; border: 2px solid #FF00FF; padding: 15px; font-size: 1.5rem; color: #fff; border-radius: 10px; }
-        .btn { display: block; width: 100%; padding: 15px; margin-top: 10px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
-        .btn-play { background: linear-gradient(to bottom, #FFD700, #B8860B); color: #000; border: 2px solid #fff; }
-        .btn-wa { background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .title { color: #FFD700; font-size: 3rem; font-weight: 900; text-transform: uppercase; margin-bottom: 5px; text-shadow: 2px 2px 10px #000; }
+        .sub { color: #fff; font-size: 1.1rem; margin-bottom: 20px; }
+        .pot-img { width: 100%; max-width: 250px; margin: 20px 0; }
+        .btn-gold { 
+            display: block; background: linear-gradient(#FFD700, #B8860B); color: #000; 
+            padding: 18px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 1.2rem;
+            border: 2px solid #fff; margin-bottom: 15px;
+        }
+        .btn-wa { 
+            display: flex; align-items: center; justify-content: center; background: #25D366; 
+            color: #fff; padding: 15px; border-radius: 50px; text-decoration: none; font-weight: 700;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>HIRA KING</h1>
-        <p style="color: #fff;">KHELO AUR JEETO DIGITAL COINS!</p>
-        <div class="slots">
-            <div class="slot">7</div><div class="slot">3</div><div class="slot">9</div><div class="slot">5</div>
-        </div>
-        <a href="#" class="btn btn-play">PLAY & WIN BIG COINS</a>
-        <a href="https://wa.me/YOUR_NUMBER_HERE" class="btn btn-wa">Chat On WhatsApp</a>
-        <p style="color: #ccc; font-size: 0.7rem; margin-top: 15px;">*Disclaimer: Only for entertainment.</p>
-    </div>
+
+<div class="main-panel">
+    <div class="title">HIRA KING</div>
+    <div class="sub">KHELO AUR JEETO DIGITAL COINS!</div>
+    
+    <img src="https://i.ibb.co/bW0J0qB/golden-pot.png" class="pot-img" alt="Golden Pot">
+
+    <a href="#" class="btn-gold">PLAY & WIN BIG COINS</a>
+    <a href="https://wa.me/91878884915" class="btn-wa">
+        <span style="margin-right:8px;">💬</span> Chat On WhatsApp
+    </a>
+</div>
+
 </body>
 </html>
