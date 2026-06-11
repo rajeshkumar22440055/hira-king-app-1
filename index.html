@@ -26,17 +26,20 @@
         }
         h1 { color: #FFD700; font-size: 2.8rem; margin-bottom: 5px; text-transform: uppercase; }
         
-        /* Animated Gold Pot CSS */
-        .pot-wrapper { position: relative; width: 150px; height: 150px; margin: 20px auto; }
-        .pot { width: 100%; height: 100%; background: #D4AF37; border-radius: 50% 50% 20% 20% / 40% 40% 60% 60%; border: 4px solid #fff; box-shadow: 0 10px 10px rgba(0,0,0,0.5); }
-        .coin { position: absolute; top: 0; left: 50%; width: 20px; height: 20px; background: gold; border-radius: 50%; animation: drop 1.5s linear infinite; }
-        @keyframes drop { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(150px); opacity: 0; } }
-
-        .btn-play { display: block; background: linear-gradient(#FFD700, #B8860B); padding: 15px; border-radius: 50px; color: black; text-decoration: none; font-weight: 900; margin-bottom: 15px; border: 2px solid white; }
-        .btn-wa { display: block; background: #25D366; padding: 15px; border-radius: 50px; color: white; text-decoration: none; font-weight: bold; }
+       <div class="pot-box" style="text-align: center; margin: 30px 0; position: relative;">
+    <style>
+        .gold-pot { width: 140px; height: 120px; background: #FFD700; margin: 0 auto; border-radius: 0 0 50% 50% / 0 0 100% 100%; border: 4px solid #B8860B; position: relative; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .coin-anim { position: absolute; top: -10px; left: 50%; width: 20px; height: 20px; background: #FFD700; border-radius: 50%; border: 2px solid #B8860B; animation: fall 1.5s linear infinite; }
+        @keyframes fall { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(120px); opacity: 0; } }
     </style>
-</head>
-<body>
+    
+    <div class="gold-pot">
+        <div class="coin-anim" style="left: 30%; animation-delay: 0s;"></div>
+        <div class="coin-anim" style="left: 50%; animation-delay: 0.5s;"></div>
+        <div class="coin-anim" style="left: 70%; animation-delay: 1s;"></div>
+    </div>
+    <h3 style="color: #FFD700; margin-top: 15px; text-transform: uppercase;">Coins Overflowing!</h3>
+</div>
 
 <div class="panel">
     <h1>HIRA KING</h1>
