@@ -8,8 +8,8 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
         
         body { 
-            /* Fixed Casino Floor Background Link */
-            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), 
+            /* Casino Floor Background */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                         url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=2000') no-repeat center center fixed; 
             background-size: cover; 
             min-height: 100vh; 
@@ -20,28 +20,18 @@
             position: relative;
         }
 
-        /* Neon Ambient Glow Layer */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle, rgba(255, 0, 128, 0.15) 0%, rgba(0, 0, 0, 0.4) 100%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Central Card */
+        /* Card Container */
         .main-card {
             position: relative;
             z-index: 2;
-            background: rgba(16, 12, 36, 0.94);
+            background: rgba(15, 10, 30, 0.94);
             border: 3px solid #FFD700;
             border-radius: 30px;
             padding: 40px 20px;
             width: 95%;
             max-width: 410px;
             text-align: center;
-            box-shadow: 0 0 50px rgba(255, 215, 0, 0.45), inset 0 0 20px rgba(255, 215, 0, 0.15);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.5);
         }
 
         h1 { 
@@ -50,88 +40,40 @@
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 2px 2px 4px #000; 
             margin-bottom: 5px; 
             font-weight: 900;
-            letter-spacing: 1px;
         }
 
         .sub-text { 
             color: #fff; 
             font-size: 1.1rem; 
-            margin-bottom: 30px; 
+            margin-bottom: 25px; 
             font-weight: bold; 
-            letter-spacing: 0.5px;
             text-shadow: 1px 1px 3px #000;
         }
         
-        /* Pot Container Layout Fixed */
+        /* Pot Container Layout */
         .pot-container {
             position: relative;
             width: 100%;
             height: 160px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: center;
         }
 
-        /* Pure CSS Golden Pot (Will never go missing) */
-        .real-pot {
-            position: relative;
+        /* Real Gold Pot Image Styling */
+        .pot-image {
             width: 150px;
-            height: 110px;
-            background: linear-gradient(135deg, #FFE4B5 0%, #FFD700 40%, #B8860B 70%, #8B6508 100%);
-            border-radius: 50% 50% 45% 45% / 40% 40% 60% 60%;
-            border: 3px solid #FFF5EE;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.6), 
-                        inset -10px -10px 20px rgba(0,0,0,0.5), 
-                        inset 10px 10px 20px rgba(255,255,255,0.4);
+            height: auto;
             z-index: 3;
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5));
         }
 
-        /* Pot Neck / Rim */
-        .real-pot::before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: 8%;
-            width: 84%;
-            height: 20px;
-            background: linear-gradient(90deg, #8B6508, #FFD700, #FFE4B5, #FFD700, #8B6508);
-            border-radius: 50%;
-            border: 2px solid #FFF5EE;
-            z-index: 4;
-        }
-
-        /* Brand Text on Pot Center */
-        .pot-logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.7rem;
-            font-weight: 900;
-            color: rgba(92, 66, 5, 0.85);
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
-            font-family: 'Georgia', serif;
-        }
-
-        /* Overflowing Gold Coins Layer */
-        .overflow-coins {
-            position: absolute;
-            top: -18px;
-            left: 15%;
-            width: 70%;
-            height: 30px;
-            background: radial-gradient(circle, #FFF, #FFD700 50%, #B8860B 90%);
-            border-radius: 50%;
-            box-shadow: 0 -6px 15px rgba(255, 215, 0, 0.85);
-            z-index: 5;
-        }
-
-        /* Falling Gold Coins */
+        /* Falling Gold Coins Animation */
         .falling-coin {
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             background: radial-gradient(circle, #FFF 5%, #FFD700 50%, #B8860B 100%);
             border: 1.5px solid #fff;
             border-radius: 50%;
@@ -139,28 +81,18 @@
             z-index: 2;
         }
 
-        .c1 { left: 28%; animation: coinDrop 1.3s linear infinite; }
-        .c2 { left: 45%; animation: coinDrop 1.7s linear infinite; animation-delay: 0.3s; }
-        .c3 { left: 62%; animation: coinDrop 1.5s linear infinite; animation-delay: 0.7s; }
+        .c1 { left: 32%; top: 10px; animation: coinDrop 1.2s linear infinite; }
+        .c2 { left: 48%; top: 10px; animation: coinDrop 1.5s linear infinite; animation-delay: 0.3s; }
+        .c3 { left: 64%; top: 10px; animation: coinDrop 1.3s linear infinite; animation-delay: 0.7s; }
 
         @keyframes coinDrop {
-            0% { transform: translateY(-50px) rotateY(0deg) scale(0.8); opacity: 0; }
+            0% { transform: translateY(-30px) rotateY(0deg); opacity: 0; }
             15% { opacity: 1; }
             85% { opacity: 1; }
-            100% { transform: translateY(80px) rotateY(360deg) scale(1.1); opacity: 0; }
+            100% { transform: translateY(100px) rotateY(360deg); opacity: 0; }
         }
 
-        /* Base Shadow for Stability Look */
-        .pot-base-shadow {
-            position: absolute;
-            bottom: -5px;
-            width: 100%;
-            height: 15px;
-            background: radial-gradient(ellipse, rgba(255,215,0,0.3) 0%, transparent 80%);
-            z-index: 2;
-        }
-
-        /* Premium Buttons Styling */
+        /* Premium Buttons */
         .btn-play { 
             display: block; 
             background: linear-gradient(180deg, #FFE4B5 0%, #FFD700 50%, #B8860B 100%); 
@@ -210,12 +142,7 @@
         <div class="falling-coin c2"></div>
         <div class="falling-coin c3"></div>
         
-        <div class="real-pot">
-            <div class="pot-logo">HK</div>
-            <div class="overflow-coins"></div>
-        </div>
-        
-        <div class="pot-base-shadow"></div>
+        <img src="https://i.ibb.co/v4bXw6W/gold-pot-coins.png" alt="Gold Pot" class="pot-image">
     </div>
 
     <a href="#" class="btn-play">PLAY & WIN BIG COINS</a>
