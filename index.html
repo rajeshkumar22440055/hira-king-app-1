@@ -3,283 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hira King Social Casino</title>
+    <title>Hira King - Social Casino</title>
     <style>
-        /* Premium Global Reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { 
+            background: url('https://i.imgur.com/kP8yZzL.jpg') no-repeat center center fixed; 
+            background-size: cover; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
         }
-
-        body {
-            /* High-converting exact replica style */
-            background: #09021a;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 15px;
-            position: relative;
-            overflow-x: hidden;
+        .container { 
+            background: rgba(10, 5, 25, 0.85); 
+            border: 3px solid #FFD700; 
+            padding: 25px; 
+            border-radius: 25px; 
+            text-align: center; 
+            width: 90%; 
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
         }
-
-        /* 1:1 Scale HD Casino Background Integration */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
-                        url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1200&auto=format&fit=crop') no-repeat center center fixed;
-            background-size: cover;
-            z-index: -2;
-        }
-
-        /* Mobile Container to mimic the absolute center layout */
-        .wrapper {
-            width: 100%;
-            max-width: 440px;
-            margin: 0 auto;
-            text-align: center;
-            z-index: 10;
-        }
-
-        /* Exact Golden Border Dark Central Panel from your Image */
-        .casino-panel {
-            background: linear-gradient(180deg, rgba(20, 10, 35, 0.95) 0%, rgba(10, 5, 20, 0.98) 100%);
-            border: 3px solid #ffdf00;
-            border-radius: 24px;
-            padding: 30px 20px;
-            box-shadow: 0 0 40px rgba(255, 223, 0, 0.25), inset 0 0 15px rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(8px);
-        }
-
-        /* HIRA KING Massive Branding Header */
-        .logo {
-            font-size: 3.4rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ffffff 0%, #fff3a1 25%, #ffdf00 60%, #aa7c11 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            filter: drop-shadow(0 0 12px rgba(255, 223, 0, 0.6));
-        }
-
-        .sub-headline {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        .sub-headline span {
-            color: #ffdf00;
-        }
-
-        .tagline {
-            color: #cbd5e1;
-            font-size: 0.88rem;
-            margin-bottom: 25px;
-            opacity: 0.9;
-        }
-
-        /* Precise 4-Digit Number Neon Slots Layout */
-        .slot-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-
-        .slot-card {
-            width: 55px;
-            height: 70px;
-            background: rgba(15, 7, 30, 0.9);
-            border-radius: 8px;
-            font-size: 2.1rem;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
-        }
-
-        /* 100% Matching neon border-colors from your sample screenshot */
-        .c1 { color: #ff3366; border: 2.5px solid #ff3366; text-shadow: 0 0 10px #ff3366; }
-        .c2 { color: #33ccff; border: 2.5px solid #33ccff; text-shadow: 0 0 10px #33ccff; }
-        .c3 { color: #33ff66; border: 2.5px solid #33ff66; text-shadow: 0 0 10px #33ff66; }
-        .c4 { color: #ff33cc; border: 2.5px solid #ff33cc; text-shadow: 0 0 10px #ff33cc; }
-
-        /* The Gold Coin Heap Graphics inside Pot */
-       <div class="pot-container" style="text-align: center; margin: 25px auto; max-width: 200px;">
-    <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 70 C 20 130 50 170 100 170 C 150 170 180 130 160 70 Z" fill="#b45309" stroke="#ffdf00" stroke-width="4"/>
-        <ellipse cx="100" cy="70" rx="60" ry="15" fill="#d97706" stroke="#ffdf00" stroke-width="4"/>
-        
-        <circle cx="100" cy="60" r="35" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        <circle cx="80" cy="50" r="25" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
-        <circle cx="120" cy="50" r="25" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
-        <circle cx="100" cy="35" r="20" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        
-        <circle cx="60" cy="80" r="8" fill="#fbbf24" />
-        <circle cx="140" cy="85" r="7" fill="#fbbf24" />
-        <circle cx="70" cy="110" r="6" fill="#f59e0b" />
-        <circle cx="130" cy="115" r="6" fill="#f59e0b" />
-    </svg>
-</div><div class="pot-container" style="text-align: center; margin: 25px auto; max-width: 200px;">
-    <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
-        <path d="M40 70 C 20 130 50 170 100 170 C 150 170 180 130 160 70 Z" fill="#b45309" stroke="#ffdf00" stroke-width="4"/>
-        <ellipse cx="100" cy="70" rx="60" ry="15" fill="#d97706" stroke="#ffdf00" stroke-width="4"/>
-        
-        <circle cx="100" cy="60" r="35" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        <circle cx="80" cy="50" r="25" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
-        <circle cx="120" cy="50" r="25" fill="#f59e0b" stroke="#d97706" stroke-width="2"/>
-        <circle cx="100" cy="35" r="20" fill="#fbbf24" stroke="#f59e0b" stroke-width="2"/>
-        
-        <circle cx="60" cy="80" r="8" fill="#fbbf24" />
-        <circle cx="140" cy="85" r="7" fill="#fbbf24" />
-        <circle cx="70" cy="110" r="6" fill="#f59e0b" />
-        <circle cx="130" cy="115" r="6" fill="#f59e0b" />
-    </svg>
-</div>
-
-        /* Exact Metallic Gold Button Style: "PLAY & WIN BIG COINS" */
-        .btn-gold {
-            display: block;
-            background: linear-gradient(180deg, #fff59d 0%, #fbc02d 40%, #f57f17 100%);
-            color: #000000;
-            font-size: 1.4rem;
-            font-weight: 900;
-            text-decoration: none;
-            padding: 15px 24px;
-            border-radius: 50px;
-            border: 2px solid #ffffff;
-            box-shadow: 0 8px 25px rgba(245, 127, 23, 0.6);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 15px;
-            transition: transform 0.1s ease;
-        }
-
-        .btn-gold:hover {
-            transform: scale(1.02);
-        }
-
-        /* High-Converting Pill Green WhatsApp Action Button */
-        .btn-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(180deg, #25d366 0%, #1ebd56 100%);
-            color: #ffffff;
-            font-size: 1.25rem;
-            font-weight: 700;
-            text-decoration: none;
-            padding: 13px 24px;
-            border-radius: 50px;
-            border: 1.5px solid rgba(255,255,255,0.25);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            margin-bottom: 25px;
-        }
-
-        .wa-icon {
-            width: 24px;
-            height: 24px;
-            fill: #ffffff;
-            margin-right: 10px;
-        }
-
-        /* Bottom Feature Lineup text */
-        .feature-ticks {
-            font-size: 0.76rem;
-            color: #cbd5e1;
-            font-weight: 600;
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            letter-spacing: 0.3px;
-        }
-
-        .feature-ticks span {
-            color: #ffdf00;
-            margin-right: 2px;
-        }
-
-        /* Policy Ad Footer Disclaimer */
-        footer {
-            margin-top: 25px;
-            font-size: 0.68rem;
-            color: #94a3b8;
-            padding: 0 5px;
-            text-align: justify;
-            line-height: 1.4;
-            opacity: 0.85;
-        }
+        h1 { color: #FFD700; font-size: 2.5rem; text-transform: uppercase; text-shadow: 0 0 10px #000; }
+        .slots { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+        .slot { background: #1a0033; border: 2px solid #FF00FF; padding: 15px; font-size: 1.5rem; color: #fff; border-radius: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; margin-top: 10px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        .btn-play { background: linear-gradient(to bottom, #FFD700, #B8860B); color: #000; border: 2px solid #fff; }
+        .btn-wa { background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; }
     </style>
 </head>
 <body>
-
-    <div class="wrapper">
-        
-        <div class="casino-panel">
-            
-            <div class="logo">Hira King</div>
-
-            <div class="sub-headline">KHELO AUR JEETO <span>DIGITAL COINS!</span></div>
-            <div class="tagline">Join the Ultimate Social Puzzle Arena</div>
-
-            <div class="slot-wrapper">
-                <div class="slot-card c1">7</div>
-                <div class="slot-card c2">3</div>
-                <div class="slot-card c3">9</div>
-                <div class="slot-card c4">5</div>
-            </div>
-
-          <div class="pot-container" style="text-align: center; margin: 20px 0; position: relative;">
-    <style>
-        .gold-pot { width: 160px; height: 160px; margin: 0 auto; background: radial-gradient(circle, #ffd700, #b8860b); border-radius: 50% 50% 20% 20% / 40% 40% 60% 60%; border: 4px solid #fff; position: relative; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
-        .falling-coin { position: absolute; width: 20px; height: 20px; background: #fbbf24; border-radius: 50%; border: 2px solid #d97706; animation: fall 2s linear infinite; }
-        @keyframes fall { 0% { top: -20px; opacity: 1; } 100% { top: 150px; opacity: 0; } }
-    </style>
-    
-    <div class="gold-pot">
-        <div class="falling-coin" style="left: 20%;"></div>
-        <div class="falling-coin" style="left: 50%; animation-delay: 0.5s;"></div>
-        <div class="falling-coin" style="left: 80%; animation-delay: 1s;"></div>
-    </div>
-    <p style="color: #ffdf00; font-weight: bold; margin-top: 10px;">WINNINGS FLOWING!</p>
-</div>
-
-            <a href="#" class="btn-gold">PLAY & WIN BIG COINS</a>
-
-           <a href="https://wa.me/918788849415" class="btn-whatsapp">
-    <svg class="wa-icon" viewBox="0 0 24 24">
-        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.654 1.488 5.428 0 9.85-4.414 9.853-9.84.002-2.63-1.023-5.101-2.885-6.964C16.36 1.975 13.89 1.5 12.01 1.5c-5.436 0-9.859 4.414-9.862 9.84-.001 1.708.482 3.323 1.39 4.734L2.52 21.423l5.427-1.422z"/>
-    </svg>
-    Chat On WhatsApp
-</a>
-            </a>
-
-            <div class="feature-ticks">
-                <div><span>★</span> Free Skill-Based Game</div>
-                <div><span>★</span> Instant Support</div>
-                <div><span>★</span> Secure Gameplay</div>
-            </div>
-
+    <div class="container">
+        <h1>HIRA KING</h1>
+        <p style="color: #fff;">KHELO AUR JEETO DIGITAL COINS!</p>
+        <div class="slots">
+            <div class="slot">7</div><div class="slot">3</div><div class="slot">9</div><div class="slot">5</div>
         </div>
-
-        <footer>
-            <p>Disclaimer: Hira King is a social gaming platform intended strictly for entertainment and analytical purposes. This app does not host, facilitate, or promote real-money gambling, cash deposits, or real currency prizes. All points and coins used inside the app have zero financial value. Safe for casual puzzle amusement.</p>
-            <p style="text-align: center; margin-top: 12px;">&copy; 2026 Hira King Group. All Rights Reserved.</p>
-        </footer>
-
+        <a href="#" class="btn btn-play">PLAY & WIN BIG COINS</a>
+        <a href="https://wa.me/YOUR_NUMBER_HERE" class="btn btn-wa">Chat On WhatsApp</a>
+        <p style="color: #ccc; font-size: 0.7rem; margin-top: 15px;">*Disclaimer: Only for entertainment.</p>
     </div>
-
 </body>
 </html>
