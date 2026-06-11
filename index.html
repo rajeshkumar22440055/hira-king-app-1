@@ -3,329 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hira King - Safe Social Casino</title>
+    <title>Hira King Social Casino</title>
     <style>
-        /* Core Reset */
+        /* Premium Reset */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            /* Full, hyper-attractive casino lobby premium gradient background */
+            /* Full casino background color fallback */
             background: radial-gradient(circle at center, #2e1065 0%, #0f052d 70%, #02000a 100%);
             color: #ffffff;
-            line-height: 1.6;
             min-height: 100vh;
-            overflow-x: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 10px;
+            position: relative;
         }
 
-        .container {
+        /* Full Casino Scene Background Effect */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Casino_Lobby_Full_Scene_Background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -2;
+            opacity: 0.5;
+        }
+
+        /* Mobile Container */
+        .wrapper {
             width: 100%;
-            max-width: 450px; /* Highly optimized for mobile view */
+            max-width: 480px;
             margin: 0 auto;
-            padding: 10px;
             text-align: center;
         }
 
-        /* Pure Casino Content Panel */
+        /* Central Glassmorphism Casino Panel */
         .casino-panel {
-            background: rgba(18, 10, 43, 0.85);
-            border: 2px solid #ffdf00;
-            border-radius: 28px;
+            background: rgba(14, 7, 33, 0.95);
+            border: 3px solid #ffdf00;
+            border-radius: 24px;
             padding: 25px 20px;
-            box-shadow: 0 0 35px rgba(212, 175, 55, 0.3), inset 0 0 20px rgba(255,255,255,0.05);
-            backdrop-filter: blur(12px);
-            margin-bottom: 20px;
+            box-shadow: 0 0 35px rgba(255, 223, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
 
-        header {
-            padding: 10px 0;
-        }
-
+        /* Main Brand Header */
         .logo {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #fff 10%, #ffdf00 50%, #d4af37 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #ffdf00 50%, #d4af37 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255, 223, 0, 0.6);
-        }
-
-        h1 {
-            font-size: 1.7rem;
-            font-weight: 800;
-            margin-top: 10px;
+            letter-spacing: 3px;
             margin-bottom: 5px;
-            color: #ffffff;
-            line-height: 1.3;
+            filter: drop-shadow(0 0 15px rgba(255,223,0,0.5));
         }
 
-        h1 span {
+        .sub-headline {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .sub-headline span {
             color: #ffdf00;
         }
 
         .tagline {
-            color: #a78bfa;
+            color: #cbd5e1;
             font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin-bottom: 20px;
         }
 
-        /* --- DYNAMIC NUMBER GAMING ANIMATION BLOCK --- */
-        .number-box-title {
-            font-size: 0.8rem;
-            color: #fef08a;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .number-animation-container {
+        /* Slot Numbers Box */
+        .slot-wrapper {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-bottom: 25px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        .num-slot {
-            width: 55px;
+        .slot-card {
+            width: 50px;
             height: 65px;
-            background: linear-gradient(to bottom, #3b0764, #1e1b4b);
-            border: 2px solid #a855f7;
-            border-radius: 12px;
-            font-size: 1.8rem;
+            background: linear-gradient(to bottom, #4c0519, #1e1b4b);
+            border: 2px solid #ec4899;
+            border-radius: 10px;
+            font-size: 1.9rem;
             font-weight: 900;
-            color: #fff;
+            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+            box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+        }
+
+        /* Neon animations on slots */
+        .c1 { color: #f43f5e; border-color: #f43f5e; animation: pulseGlow 1.2s infinite alternate; }
+        .c2 { color: #38bdf8; border-color: #38bdf8; animation: pulseGlow 1.2s infinite alternate 0.3s; }
+        .c3 { color: #4ade80; border-color: #4ade80; animation: pulseGlow 1.2s infinite alternate 0.6s; }
+        .c4 { color: #e11d48; border-color: #e11d48; animation: pulseGlow 1.2s infinite alternate 0.9s; }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(255,255,255,0.2)); }
+            100% { transform: scale(1.03); filter: drop-shadow(0 0 8px currentColor); }
+        }
+
+        /* Big Golden Pot Design */
+        .pot-container {
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto 20px auto;
             position: relative;
-            overflow: hidden;
         }
 
-        /* Smooth continuous neon shifting on slots */
-        .ns1 { animation: numGlow 1.5s infinite alternate; }
-        .ns2 { animation: numGlow 1.5s infinite alternate 0.3s; }
-        .ns3 { animation: numGlow 1.5s infinite alternate 0.6s; }
-        .ns4 { animation: numGlow 1.5s infinite alternate 0.9s; }
-
-        @keyframes numGlow {
-            0% { border-color: #a855f7; box-shadow: 0 0 5px rgba(168, 85, 247, 0.4); color: #fff; }
-            100% { border-color: #ffdf00; box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); color: #ffdf00; }
-        }
-
-        /* --- INTEGRATED LEAD GENERATION FORM --- */
-        .lead-gen-form {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            text-align: left;
-        }
-
-        .lead-gen-form h2 {
-            font-size: 1.25rem;
-            color: #ffdf00;
-            font-weight: 700;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-
-        .lead-gen-form p {
-            font-size: 0.85rem;
-            color: #cbd5e1;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 12px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.8rem;
-            color: #ffffff;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .form-group input {
+        .pot-image-render {
             width: 100%;
-            padding: 10px;
-            border: 1.5px solid #cbd5e1;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: #1e293b;
-            background: #ffffff;
-        }
-
-        .submit-btn {
+            height: auto;
             display: block;
-            width: 100%;
-            background: #2563eb; 
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 12px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s;
-            text-transform: uppercase;
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
         }
 
-        .submit-btn:hover {
-            background: #1d4ed8;
-        }
-
-        /* --- BUTTONS SYSTEM --- */
-        .btn-action {
+        /* Premium Gold Button */
+        .btn-gold {
             display: block;
-            background: linear-gradient(135deg, #ffdf00 0%, #eab308 100%);
+            background: linear-gradient(135deg, #ffe066 0%, #f59e0b 50%, #b45309 100%);
             color: #000000;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             font-weight: 800;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        /* Green WhatsApp Button */
+        .btn-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
             text-decoration: none;
             padding: 14px 20px;
             border-radius: 50px;
-            box-shadow: 0 8px 25px rgba(234, 179, 8, 0.4);
-            text-transform: uppercase;
-            transition: transform 0.2s;
+            border: 1.5px solid rgba(255,255,255,0.2);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
             margin-bottom: 20px;
-            border: 2px solid #ffffff;
+            transition: transform 0.2s;
         }
 
-        .btn-action:hover {
-            transform: scale(1.02);
+        .wa-logo-svg {
+            width: 24px;
+            height: 24px;
+            fill: #ffffff;
+            margin-right: 12px;
         }
 
-        /* Features List */
-        .feature-box {
-            text-align: left;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .feat {
+        /* Bottom Features */
+        .feature-ticks {
+            font-size: 0.78rem;
+            color: #e2e8f0;
+            font-weight: 600;
             display: flex;
-            align-items: center;
-            margin-bottom: 8px;
-            font-size: 0.85rem;
-            color: #cbd5e1;
+            justify-content: center;
+            gap: 10px;
+            letter-spacing: 0.5px;
         }
 
-        .feat:last-child { margin-bottom: 0; }
-
-        .f-icon {
+        .feature-ticks span {
             color: #ffdf00;
-            margin-right: 10px;
         }
 
-        /* Standard Ads Policy Footer */
+        /* Disclaimer Footer */
         footer {
             margin-top: 20px;
-            font-size: 0.7rem;
+            font-size: 0.68rem;
             color: #94a3b8;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
+            padding: 0 10px;
             text-align: justify;
-        }
-
-        .footer-links {
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin: 0 8px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <div class="wrapper">
         
-        <main class="casino-panel">
+        <div class="casino-panel">
             
-            <header>
-                <div class="logo">Hira King</div>
-            </header>
+            <div class="logo">Hira King</div>
 
-            <h1>Welcome to <span>Grand Arena</span></h1>
-            <p class="tagline">The Ultimate Social Puzzle Arena</p>
+            <div class="sub-headline">KHELO AUR JEETO <span>DIGITAL COINS!</span></div>
+            <div class="tagline">Join the Ultimate Social Puzzle Arena</div>
 
-            <!-- Number Gaming Policy Safe Area -->
-            <div class="number-box-title">⚡ Live Lucky Draw Analysis ⚡</div>
-            <div class="number-animation-container">
-                <div class="num-slot ns1">7</div>
-                <div class="num-slot ns2">3</div>
-                <div class="num-slot ns3">9</div>
-                <div class="num-slot ns4">5</div>
+            <div class="slot-wrapper">
+                <div class="slot-card c1">7</div>
+                <div class="slot-card c2">3</div>
+                <div class="slot-card c3">9</div>
+                <div class="slot-card c4">5</div>
             </div>
 
-            <!-- INTEGRATED LEAD GEN FORM -->
-            <form class="lead-gen-form" action="#" method="POST">
-                <h2>Claim Your Daily Bonus</h2>
-                <p>Register now to receive a 1000 Point welcome bonus instantly!</p>
-                
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter Full Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
-                </div>
-                
-                <button type="submit" class="submit-btn">Get My Bonus Now</button>
-            </form>
+            <div class="pot-container">
+                <svg class="pot-image-render" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#fff3a1"/>
+                            <stop offset="50%" stop-color="#ffd700"/>
+                            <stop offset="100%" stop-color="#b45309"/>
+                        </radialGradient>
+                    </defs>
+                    <ellipse cx="100" cy="55" rx="55" ry="25" fill="url(#goldGlow)" stroke="#fff" stroke-width="1"/>
+                    <circle cx="85" cy="45" r="12" fill="#ffd700" stroke="#fff"/>
+                    <circle cx="105" cy="42" r="14" fill="#f59e0b" stroke="#fff"/>
+                    <circle cx="120" cy="48" r="11" fill="#ffe066" stroke="#fff"/>
+                    <circle cx="70" cy="52" r="10" fill="#b45309" stroke="#fff"/>
+                    <path d="M 45,60 C 20,110 50,150 100,150 C 150,150 180,110 155,60 Z" fill="url(#goldGlow)" stroke="#ffdf00" stroke-width="3"/>
+                    <ellipse cx="100" cy="60" rx="58" ry="10" fill="#b45309" stroke="#ffdf00" stroke-width="2"/>
+                </svg>
+            </div>
 
-            <!-- Main Download Button -->
-            <!-- Apni APK ka link 'YOUR_APK_LINK_HERE' ki jagah daal dena -->
-            <a href="YOUR_APK_LINK_HERE" class="btn-action">
-                🎮 DOWNLOAD APP FREE
+            <a href="#" class="btn-gold">PLAY & WIN BIG COINS</a>
+
+            <a href="tel:91XXXXXXXXXX" class="btn-whatsapp">
+                <svg class="wa-logo-svg" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.654 1.488 5.428 0 9.85-4.414 9.853-9.84.002-2.63-1.023-5.101-2.885-6.964C16.36 1.975 13.89 1.5 12.01 1.5c-5.436 0-9.859 4.414-9.862 9.84-.001 1.708.482 3.323 1.39 4.734L2.52 21.423l5.427-1.422z"/>
+                </svg>
+                WhatsApp: +91 8788849415
             </a>
 
-            <!-- Standard Feature Checklist -->
-            <div class="feature-box">
-                <div class="feat"><span class="f-icon">♦</span> Fast Point Updates & Live Results</div>
-                <div class="feat"><span class="f-icon">♦</span> Safe & Super Secure Lightweight APK</div>
-                <div class="feat"><span class="f-icon">♦</span> Smooth Skill-based Gameplay Fun</div>
-                <div class="feat"><span class="f-icon">♦</span> 24/7 Global Member Support Help</div>
+            <div class="feature-ticks">
+                <div><span>★</span> Free Skill-Based Game</div>
+                <div><span>★</span> Instant Support</div>
+                <div><span>★</span> Secure Gameplay</div>
             </div>
 
-        </main>
+        </div>
 
-        <!-- Mandatory Facebook Policy Compliance Disclaimer -->
         <footer>
-            <div class="footer-links">
-                <a href="#privacy">Privacy Policy</a> | 
-                <a href="#terms">Terms</a> | 
-                <a href="#rules">Rules</a>
-            </div>
-            <p>
-                Disclaimer: Hira King is a social gaming platform intended strictly for entertainment and analytical purposes. This app does not host, facilitate, or promote real-money gambling, cash deposits, or real currency prizes. All points and coins used inside the app have zero financial value. Safe for casual puzzle amusement.
-            </p>
-            <p style="text-align: center; margin-top: 10px;">&copy; 2026 Hira King Media Group. All Rights Reserved.</p>
+            <p>Disclaimer: Hira King is a social gaming platform intended strictly for entertainment and analytical purposes. This app does not host, facilitate, or promote real-money gambling, cash deposits, or real currency prizes. All points and coins used inside the app have zero financial value. Safe for casual puzzle amusement.</p>
+            <p style="text-align: center; margin-top: 10px;">&copy; 2026 Hira King Group. All Rights Reserved.</p>
         </footer>
 
     </div>
