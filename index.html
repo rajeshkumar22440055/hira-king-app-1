@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hira King Social Casino</title>
     <style>
-        /* Premium Reset */
+        /* Premium Global Reset */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -14,64 +14,66 @@
         }
 
         body {
-            /* Full casino background color fallback */
-            background: radial-gradient(circle at center, #2e1065 0%, #0f052d 70%, #02000a 100%);
+            /* High-converting exact replica style */
+            background: #09021a;
             color: #ffffff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 10px;
+            padding: 15px;
             position: relative;
+            overflow-x: hidden;
         }
 
-        /* Full Casino Scene Background Effect */
+        /* 1:1 Scale HD Casino Background Integration */
         body::before {
             content: "";
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: url('https://upload.wikimedia.org/wikipedia/commons/4/42/Casino_Lobby_Full_Scene_Background.jpg') no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1200&auto=format&fit=crop') no-repeat center center fixed;
             background-size: cover;
             z-index: -2;
-            opacity: 0.5;
         }
 
-        /* Mobile Container */
+        /* Mobile Container to mimic the absolute center layout */
         .wrapper {
             width: 100%;
-            max-width: 480px;
+            max-width: 440px;
             margin: 0 auto;
             text-align: center;
+            z-index: 10;
         }
 
-        /* Central Glassmorphism Casino Panel */
+        /* Exact Golden Border Dark Central Panel from your Image */
         .casino-panel {
-            background: rgba(14, 7, 33, 0.95);
+            background: linear-gradient(180deg, rgba(20, 10, 35, 0.95) 0%, rgba(10, 5, 20, 0.98) 100%);
             border: 3px solid #ffdf00;
             border-radius: 24px;
-            padding: 25px 20px;
-            box-shadow: 0 0 35px rgba(255, 223, 0, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            padding: 30px 20px;
+            box-shadow: 0 0 40px rgba(255, 223, 0, 0.25), inset 0 0 15px rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
         }
 
-        /* Main Brand Header */
+        /* HIRA KING Massive Branding Header */
         .logo {
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #ffffff 0%, #ffdf00 50%, #d4af37 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #fff3a1 25%, #ffdf00 60%, #aa7c11 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 5px;
-            filter: drop-shadow(0 0 15px rgba(255,223,0,0.5));
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            filter: drop-shadow(0 0 12px rgba(255, 223, 0, 0.6));
         }
 
         .sub-headline {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 800;
             color: #ffffff;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             margin-bottom: 4px;
         }
@@ -82,125 +84,122 @@
 
         .tagline {
             color: #cbd5e1;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
+            font-size: 0.88rem;
+            margin-bottom: 25px;
+            opacity: 0.9;
         }
 
-        /* Slot Numbers Box */
+        /* Precise 4-Digit Number Neon Slots Layout */
         .slot-wrapper {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 25px;
         }
 
         .slot-card {
-            width: 50px;
-            height: 65px;
-            background: linear-gradient(to bottom, #4c0519, #1e1b4b);
-            border: 2px solid #ec4899;
-            border-radius: 10px;
-            font-size: 1.9rem;
+            width: 55px;
+            height: 70px;
+            background: rgba(15, 7, 30, 0.9);
+            border-radius: 8px;
+            font-size: 2.1rem;
             font-weight: 900;
-            color: #ffffff;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
         }
 
-        /* Neon animations on slots */
-        .c1 { color: #f43f5e; border-color: #f43f5e; animation: pulseGlow 1.2s infinite alternate; }
-        .c2 { color: #38bdf8; border-color: #38bdf8; animation: pulseGlow 1.2s infinite alternate 0.3s; }
-        .c3 { color: #4ade80; border-color: #4ade80; animation: pulseGlow 1.2s infinite alternate 0.6s; }
-        .c4 { color: #e11d48; border-color: #e11d48; animation: pulseGlow 1.2s infinite alternate 0.9s; }
+        /* 100% Matching neon border-colors from your sample screenshot */
+        .c1 { color: #ff3366; border: 2.5px solid #ff3366; text-shadow: 0 0 10px #ff3366; }
+        .c2 { color: #33ccff; border: 2.5px solid #33ccff; text-shadow: 0 0 10px #33ccff; }
+        .c3 { color: #33ff66; border: 2.5px solid #33ff66; text-shadow: 0 0 10px #33ff66; }
+        .c4 { color: #ff33cc; border: 2.5px solid #ff33cc; text-shadow: 0 0 10px #ff33cc; }
 
-        @keyframes pulseGlow {
-            0% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(255,255,255,0.2)); }
-            100% { transform: scale(1.03); filter: drop-shadow(0 0 8px currentColor); }
-        }
-
-        /* Big Golden Pot Design */
+        /* The Gold Coin Heap Graphics inside Pot */
         .pot-container {
             width: 100%;
-            max-width: 180px;
-            margin: 0 auto 20px auto;
-            position: relative;
+            max-width: 190px;
+            margin: 0 auto 25px auto;
         }
 
-        .pot-image-render {
+        .pot-svg {
             width: 100%;
             height: auto;
-            display: block;
-            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
         }
 
-        /* Premium Gold Button */
+        /* Exact Metallic Gold Button Style: "PLAY & WIN BIG COINS" */
         .btn-gold {
             display: block;
-            background: linear-gradient(135deg, #ffe066 0%, #f59e0b 50%, #b45309 100%);
+            background: linear-gradient(180deg, #fff59d 0%, #fbc02d 40%, #f57f17 100%);
             color: #000000;
-            font-size: 1.35rem;
-            font-weight: 800;
+            font-size: 1.4rem;
+            font-weight: 900;
             text-decoration: none;
-            padding: 15px 20px;
+            padding: 15px 24px;
             border-radius: 50px;
             border: 2px solid #ffffff;
-            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+            box-shadow: 0 8px 25px rgba(245, 127, 23, 0.6);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 15px;
-            transition: transform 0.2s;
+            transition: transform 0.1s ease;
         }
 
-        /* Green WhatsApp Button */
+        .btn-gold:hover {
+            transform: scale(1.02);
+        }
+
+        /* High-Converting Pill Green WhatsApp Action Button */
         .btn-whatsapp {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            background: linear-gradient(180deg, #25d366 0%, #1ebd56 100%);
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 700;
             text-decoration: none;
-            padding: 14px 20px;
+            padding: 13px 24px;
             border-radius: 50px;
-            border: 1.5px solid rgba(255,255,255,0.2);
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-            margin-bottom: 20px;
-            transition: transform 0.2s;
+            border: 1.5px solid rgba(255,255,255,0.25);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            margin-bottom: 25px;
         }
 
-        .wa-logo-svg {
+        .wa-icon {
             width: 24px;
             height: 24px;
             fill: #ffffff;
-            margin-right: 12px;
+            margin-right: 10px;
         }
 
-        /* Bottom Features */
+        /* Bottom Feature Lineup text */
         .feature-ticks {
-            font-size: 0.78rem;
-            color: #e2e8f0;
+            font-size: 0.76rem;
+            color: #cbd5e1;
             font-weight: 600;
             display: flex;
             justify-content: center;
-            gap: 10px;
-            letter-spacing: 0.5px;
+            gap: 8px;
+            letter-spacing: 0.3px;
         }
 
         .feature-ticks span {
             color: #ffdf00;
+            margin-right: 2px;
         }
 
-        /* Disclaimer Footer */
+        /* Policy Ad Footer Disclaimer */
         footer {
-            margin-top: 20px;
+            margin-top: 25px;
             font-size: 0.68rem;
             color: #94a3b8;
-            padding: 0 10px;
+            padding: 0 5px;
             text-align: justify;
             line-height: 1.4;
+            opacity: 0.85;
         }
     </style>
 </head>
@@ -223,31 +222,32 @@
             </div>
 
             <div class="pot-container">
-                <svg class="pot-image-render" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+                <svg class="pot-svg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="#fff3a1"/>
-                            <stop offset="50%" stop-color="#ffd700"/>
-                            <stop offset="100%" stop-color="#b45309"/>
+                        <radialGradient id="coinGold" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#fffde7"/>
+                            <stop offset="60%" stop-color="#ffd700"/>
+                            <stop offset="100%" stop-color="#ff6f00"/>
                         </radialGradient>
                     </defs>
-                    <ellipse cx="100" cy="55" rx="55" ry="25" fill="url(#goldGlow)" stroke="#fff" stroke-width="1"/>
-                    <circle cx="85" cy="45" r="12" fill="#ffd700" stroke="#fff"/>
-                    <circle cx="105" cy="42" r="14" fill="#f59e0b" stroke="#fff"/>
-                    <circle cx="120" cy="48" r="11" fill="#ffe066" stroke="#fff"/>
-                    <circle cx="70" cy="52" r="10" fill="#b45309" stroke="#fff"/>
-                    <path d="M 45,60 C 20,110 50,150 100,150 C 150,150 180,110 155,60 Z" fill="url(#goldGlow)" stroke="#ffdf00" stroke-width="3"/>
-                    <ellipse cx="100" cy="60" rx="58" ry="10" fill="#b45309" stroke="#ffdf00" stroke-width="2"/>
+                    <ellipse cx="100" cy="60" rx="55" ry="25" fill="url(#coinGold)" stroke="#fff" stroke-width="0.5"/>
+                    <circle cx="85" cy="50" r="14" fill="#ffd700" stroke="#ffb300"/>
+                    <circle cx="102" cy="45" r="16" fill="#ffb300" stroke="#ff6f00"/>
+                    <circle cx="120" cy="52" r="13" fill="#ffe082" stroke="#ffd700"/>
+                    <circle cx="72" cy="55" r="12" fill="#ff6f00" stroke="#b71c1c"/>
+                    <path d="M 50,65 C 25,110 50,145 100,145 C 150,145 175,110 150,65 Z" fill="url(#coinGold)" stroke="#ffdf00" stroke-width="3"/>
+                    <ellipse cx="100" cy="65" rx="54" ry="8" fill="#e65100" stroke="#ffd700" stroke-width="1.5"/>
                 </svg>
             </div>
 
             <a href="#" class="btn-gold">PLAY & WIN BIG COINS</a>
 
-            <a href="tel:91XXXXXXXXXX" class="btn-whatsapp">
-                <svg class="wa-logo-svg" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.654 1.488 5.428 0 9.85-4.414 9.853-9.84.002-2.63-1.023-5.101-2.885-6.964C16.36 1.975 13.89 1.5 12.01 1.5c-5.436 0-9.859 4.414-9.862 9.84-.001 1.708.482 3.323 1.39 4.734L2.52 21.423l5.427-1.422z"/>
-                </svg>
-                WhatsApp: +91 8788849415
+           <a href="https://wa.me/918788849415" class="btn-whatsapp">
+    <svg class="wa-icon" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.488 4.654 1.488 5.428 0 9.85-4.414 9.853-9.84.002-2.63-1.023-5.101-2.885-6.964C16.36 1.975 13.89 1.5 12.01 1.5c-5.436 0-9.859 4.414-9.862 9.84-.001 1.708.482 3.323 1.39 4.734L2.52 21.423l5.427-1.422z"/>
+    </svg>
+    Chat On WhatsApp
+</a>
             </a>
 
             <div class="feature-ticks">
@@ -260,7 +260,7 @@
 
         <footer>
             <p>Disclaimer: Hira King is a social gaming platform intended strictly for entertainment and analytical purposes. This app does not host, facilitate, or promote real-money gambling, cash deposits, or real currency prizes. All points and coins used inside the app have zero financial value. Safe for casual puzzle amusement.</p>
-            <p style="text-align: center; margin-top: 10px;">&copy; 2026 Hira King Group. All Rights Reserved.</p>
+            <p style="text-align: center; margin-top: 12px;">&copy; 2026 Hira King Group. All Rights Reserved.</p>
         </footer>
 
     </div>
