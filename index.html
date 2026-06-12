@@ -3,171 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hira King - Official</title>
+    <title>Hira King - Official Skill Gaming App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
     <style>
-        /* Reset and Base Styles */
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-            font-family: 'Helvetica Neue', Arial, sans-serif; 
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
-        
-        body { 
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
-                        url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=2000') no-repeat center center fixed; 
-            background-size: cover; 
-            min-height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Ambient Outer Glow behind the card just like the image */
-        body::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255, 215, 0, 0.25) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Central Premium Card Box */
-        .main-card {
-            position: relative;
-            z-index: 2;
-            background: #0f0a1c; /* Deep dark purple-black shade from image */
-            border: 3.5px solid #ffd700; /* Crisp gold border */
-            border-radius: 24px;
-            padding: 50px 30px;
-            width: 90%;
-            max-width: 430px;
+        .hero-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
             text-align: center;
-            box-shadow: 0 0 60px rgba(255, 215, 0, 0.45);
+            padding: 60px 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
-        /* Typography - Exact Matches */
-        h1 { 
-            color: #ffd700; 
-            font-size: 3.4rem; 
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            font-family: 'Times New Roman', Times, serif; /* Serifs match the layout */
+        .hero-section h1 {
+            font-weight: bold;
+            font-size: 32px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
         }
-
-        .sub-text { 
-            color: #ffffff; 
-            font-size: 1.05rem; 
-            margin-bottom: 30px; 
-            font-weight: 700; 
-            letter-spacing: 0.8px;
-        }
-        
-        /* Pot Wrapper Position Fix */
-        .pot-wrapper {
-            position: relative;
-            width: 100%;
-            height: 150px;
+        .hero-section p {
+            font-size: 16px;
+            opacity: 0.9;
             margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
-        /* The 100% Same Pot Visual */
-        .pot-visual {
-            width: 160px; /* Pot ka size control karne ke liye */
-            height: auto; /* Height auto rakhne se image stretch nahi hogi */
-            display: block;
-            margin: 0 auto;
-            position: relative;
-            z-index: 5;
-            filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.5));
-            
-        
+        .btn-download {
+            background-color: #ffcc00;
+            color: #111;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 35px;
+            border-radius: 50px;
+            border: none;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+            text-decoration: none;
+            display: inline-block;
         }
-
-        /* Dynamic Coin Particle System Over Pot */
-        .live-coin {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: radial-gradient(circle, #fff, #ffd700 60%, #b8860b);
-            border: 1px solid #fff;
-            border-radius: 50%;
-            z-index: 6; /* Coins ko image ke upar dikhane ke liye index badhaya */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+        .btn-download:hover {
+            background-color: #e6b800;
+            color: #111;
+            transform: translateY(-2px);
+            text-decoration: none;
         }
-
-        .lc1 { left: 35%; top: 20px; animation: coinFloat 1.4s linear infinite; }
-        .lc2 { left: 48%; top: 10px; animation: coinFloat 1.8s linear infinite; animation-delay: 0.4s; }
-        .lc3 { left: 62%; top: 25px; animation: coinFloat 1.6s linear infinite; animation-delay: 0.9s; }
-
-        @keyframes coinFloat {
-            0% { transform: translateY(-20px) rotateY(0deg) scale(0.8); opacity: 0; }
-            20% { opacity: 1; }
-            80% { opacity: 1; }
-            100% { transform: translateY(60px) rotateY(360deg) scale(1.1); opacity: 0; }
+        .features-section {
+            padding: 40px 15px;
+            text-align: center;
         }
-
-        /* Luxury Gold Button Gradient */
-        .btn-gold { 
-            display: block; 
-            background: linear-gradient(180deg, #fce08d 0%, #d4af37 50%, #aa8210 100%); 
-            padding: 16px 20px; 
-            border-radius: 12px; /* Rectangular curvature matching image */
-            color: #000000; 
-            text-decoration: none; 
-            font-weight: 800; 
-            font-size: 1.1rem; 
-            margin-bottom: 18px; 
-            border: 1.5px solid #fff; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            text-transform: uppercase;
-            transition: transform 0.2s;
+        .feature-box {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
         }
-        .btn-gold:hover { 
-            transform: scale(1.02);
+        .feature-box h3 {
+            color: #1e3c72;
+            font-weight: bold;
+            font-size: 18px;
         }
-
-        /* WhatsApp Button Gradient */
-        .btn-green { 
-            display: block; 
-            background: linear-gradient(180deg, #1ebd56 0%, #128c3e 100%); 
-            padding: 16px 20px; 
-            border-radius: 12px; 
-            color: #ffffff; 
-            text-decoration: none; 
-            font-weight: 700; 
-            font-size: 1.1rem; 
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
+        footer {
+            background-color: #222;
+            color: #bbb;
+            padding: 30px 15px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 5px;
         }
-        .btn-green:hover { 
-            transform: scale(1.02);
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .disclaimer {
+            border-top: 1px solid #444;
+            padding-top: 15px;
+            margin-top: 15px;
+            opacity: 0.7;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-<div class="main-card">
-    <h1>HIRA KING</h1>
-    <p class="sub-text">KHELO AUR JEETO DIGITAL COINS!</p>
-    
-    <div class="pot-wrapper">
-        <div class="live-coin lc1"></div>
-        <div class="live-coin lc2"></div>
-        <div class="live-coin lc3"></div>
-        
-        <img src="https://i.ibb.co/JRFyV49Q/goldencoin-Photoroom.png" alt="HK Gold Pot" class="pot-visual">
+    <div class="hero-section">
+        <div class="container">
+            <h1>HIRA KING MOBILE APP</h1>
+            <p>Experience India's most popular free-to-play number puzzle, quiz, and skill-based board games right on your smartphone. Fun, secure, and fast!</p>
+            <a href="https://wa.me/918788849415" class="btn-download" target="_blank">
+                <span class="glyphicon glyphicon-download-alt"></span> DOWNLOAD LATEST APK
+            </a>
+        </div>
     </div>
 
-    <a href="#" class="btn-gold">Play & Win Big Coins</a>
-    <a href="https://wa.me/918788849415" class="btn-green">Chat On WhatsApp</a>
-</div>
+    <div class="features-section container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <h3>100% Secure Platform</h3>
+                    <p>Our application ensures zero lag and high-end privacy security protocols for all users.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <h3>Skill & Mind Puzzles</h3>
+                    <p>Engage in daily mathematical calculation puzzles and test your strategic prediction accuracy.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <h3>24/7 Instant Support</h3>
+                    <p>Connect with our verified mobile help desk instantly via WhatsApp for any gameplay assistance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>
+                <a href="#privacy">Privacy Policy</a> | 
+                <a href="#terms">Terms of Service</a> | 
+                <a href="https://wa.me/918788849415">Contact Support</a>
+            </p>
+            
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> Hira King is an independent online skill-based entertainment and educational puzzle platform. We do not promote, facilitate, or organize real-money gambling, sports betting, or illegal lotteries. This platform is strictly for users above 18 years of age. Google, WhatsApp, and Facebook are trademarks of their respective owners, and this website is not endorsed by them.</p>
+                <p>&copy; 2026 Hira King Media Group. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
