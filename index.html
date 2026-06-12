@@ -3,95 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hira King - Official Skill Gaming App</title>
+    <title>Hira King - Official Social Casino App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
     <style>
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #0b0c10;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
+
+        /* 🌟 MAIN CASINO BACKGROUND WITH GRADIENT OVERLAY 🌟 */
         .hero-section {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), 
+                        url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
-            padding: 60px 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 80px 15px 40px 15px;
+            position: relative;
+            min-height: auto;
         }
+
+        /* 🌟 CENTER GOLDEN POT DESIGN 🌟 */
+        .golden-pot-container {
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto 20px auto;
+            position: relative;
+        }
+        .golden-pot-img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 0px 25px rgba(255, 215, 0, 0.6)); /* Gold glow effect */
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Pot floating animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
         .hero-section h1 {
-            font-weight: bold;
-            font-size: 32px;
+            font-weight: 900;
+            font-size: 38px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.9), 0px 0px 10px rgba(255, 215, 0, 0.3);
             margin-bottom: 15px;
-            letter-spacing: 1px;
         }
+
         .hero-section p {
             font-size: 16px;
-            opacity: 0.9;
-            margin-bottom: 30px;
-            max-width: 600px;
+            color: #e0e0e0;
+            margin-bottom: 35px;
+            max-width: 650px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.6;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
         }
+
+        /* 🌟 PREMIUM GLOWING DOWNLOAD BUTTON 🌟 */
         .btn-download {
-            background-color: #ffcc00;
-            color: #111;
-            font-size: 18px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+            color: #000 !important;
+            font-size: 20px;
             font-weight: bold;
-            padding: 12px 35px;
+            padding: 14px 40px;
             border-radius: 50px;
             border: none;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
             text-decoration: none;
             display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .btn-download:hover {
-            background-color: #e6b800;
-            color: #111;
-            transform: translateY(-2px);
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 12px 30px rgba(255, 215, 0, 0.7);
+            background: linear-gradient(135deg, #ffaa00 0%, #ffd700 100%);
             text-decoration: none;
         }
+
+        /* 🌟 DARK GLASS FEATURES SECTION 🌟 */
         .features-section {
-            padding: 40px 15px;
-            text-align: center;
+            background: linear-gradient(rgba(11, 12, 16, 0.9), #050508);
+            padding: 50px 15px;
+            position: relative;
         }
         .feature-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.4);
+            background: rgba(255, 255, 255, 0.07);
         }
         .feature-box h3 {
-            color: #1e3c72;
+            color: #ffd700; /* Gold color for subheadings */
             font-weight: bold;
-            font-size: 18px;
+            font-size: 20px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
+        .feature-box p {
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* 🌟 FOOTER 🌟 */
         footer {
-            background-color: #222;
-            color: #bbb;
-            padding: 30px 15px;
+            background-color: #050508;
+            color: #888;
+            padding: 40px 15px;
             text-align: center;
             font-size: 12px;
-            margin-top: 5px;
+            border-top: 1px solid rgba(255,255,255,0.05);
         }
         footer a {
-            color: #ffcc00;
+            color: #ffd700;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 12px;
+            font-size: 13px;
         }
         footer a:hover {
             text-decoration: underline;
+            color: #fff;
         }
         .disclaimer {
-            border-top: 1px solid #444;
-            padding-top: 15px;
-            margin-top: 15px;
-            opacity: 0.7;
-            line-height: 1.6;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 20px;
+            margin-top: 25px;
+            opacity: 0.6;
+            line-height: 1.8;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
@@ -99,51 +164,35 @@
 
     <div class="hero-section">
         <div class="container">
+            
+            <div class="golden-pot-container">
+                <img src="https://i.ibb.co/tTVjC6pJ/goldencoin-Photoroom.png" alt="Golden Pot" class="golden-pot-img">
+            </div>
+
             <h1>HIRA KING MOBILE APP</h1>
-            <p>Experience India's most popular free-to-play number puzzle, quiz, and skill-based board games right on your smartphone. Fun, secure, and fast!</p>
-            <a href="https://wa.me/918788849415" class="btn-download" target="_blank">
-                <span class="glyphicon glyphicon-download-alt"></span> DOWNLOAD LATEST APK
+            <p>Experience India's premier free-to-play social casino simulation, interactive number quizzes, and skill-based board games right on your smartphone. Enjoy 100% secure, seamless, and lightning-fast entertainment.</p>
+            
+            <a href="http://hiraking.com/" class="btn-download">
+                <span class="glyphicon glyphicon-play"></span> PLAY & DOWNLOAD NOW
             </a>
         </div>
     </div>
 
-    <div class="features-section container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="feature-box">
-                    <h3>100% Secure Platform</h3>
-                    <p>Our application ensures zero lag and high-end privacy security protocols for all users.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box">
-                    <h3>Skill & Mind Puzzles</h3>
-                    <p>Engage in daily mathematical calculation puzzles and test your strategic prediction accuracy.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box">
-                    <h3>24/7 Instant Support</h3>
-                    <p>Connect with our verified mobile help desk instantly via WhatsApp for any gameplay assistance.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
+    <div class="features-section">
         <div class="container">
-            <p>
-                <a href="#privacy">Privacy Policy</a> | 
-                <a href="#terms">Terms of Service</a> | 
-                <a href="https://wa.me/918788849415">Contact Support</a>
-            </p>
-            
-            <div class="disclaimer">
-                <p><strong>Disclaimer:</strong> Hira King is an independent online skill-based entertainment and educational puzzle platform. We do not promote, facilitate, or organize real-money gambling, sports betting, or illegal lotteries. This platform is strictly for users above 18 years of age. Google, WhatsApp, and Facebook are trademarks of their respective owners, and this website is not endorsed by them.</p>
-                <p>&copy; 2026 Hira King Media Group. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h3>100% Verified Security</h3>
+                        <p>Our app incorporates high-grade modern data security and privacy protocols ensuring a completely lag-free interactive gaming environment.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h3>Social Casino & Trivia</h3>
+                        <p>Immerse yourself in casual coin-based slot simulations, daily calculation quizzes, and test your ultimate strategic accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <h3>Instant Help Desk</h3>
